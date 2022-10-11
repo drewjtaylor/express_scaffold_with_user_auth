@@ -2,20 +2,34 @@
 
 
 Steps before using for a different project:
+
 Update package.json title and description
+
 edit config.js to have your database name in the end of "mongoUrl" and as "mongoDbName" (currently "startupdb")
+
 Also in config.js, change 'secretKey' to be any long random string
+
 Add config.js to gitignore
-use OpenSSL to create "server.cert" and "server.key", and add these files to "bin" folder
+
+use OpenSSL to create "server.cert" and "server.key" using the following command:
+
+`openssl req -nodes -new -x509 -keyout server.key -out server.cert`
+
+Add these files to "bin" folder 
+
 Scrap or reconfigure the "eventsRouter" in "routes" and "Event.js" in "models" (currently has functionality to require user auth for certain things, post things, etc.)
 
 
 
 
 To use:
+
 run "deploy.sh" to boot up the mongo server in a terminal
+
 run "npm start" in another terminal to keep the server running as you make changes.
+
 test out your work with postman/insomnia/your working front-end
+
 
 An admin user will need to be manually created in mongoDB to use any routes that require such privelages.
 
