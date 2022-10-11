@@ -56,14 +56,12 @@ PUT: Will edit an existing user’s information, updating any fields included in
 ## /events
 GET: Will retrieve all events from database. (Ignore the highlighted event times for now. Just note that multiple events are returned.)
 
-![all events retrieved using postman](./demo-screens/all-events-postman.jpg)
 
 
 If the body of the request has a startDate (in JSON format) but no endDate, all events for that day are returned.
 
 If the body of the request has a startDate and endDate, all events on or between those dates will be returned.
 
-![limited dates returned with postman](./demo-screens/specific-date-range-events-postman.jpg)
 
 DELETE: Clear all events from database
 Requires bearer token from an Admin to be present.
@@ -86,13 +84,8 @@ Requires a bearer token from either the creator of the event, or from an admin u
 
 When a user us successfully logged in, a token is returned.
 
-![user logged in](./demo-screens/token-after-log-in.jpg)
-
 This token can be copied and entered as a Bearer Token in the header (or automatically entered using Postman's "bearer" authentication method,) causing future requests to let the server know which user is making the request.
 
 Here is an example of using the bearer token using Postman's bearer authentication
-![postman bearer token](./demo-screens/postman-bearer-token.jpg)
-
 
 You can also add the header directly (this is all Postman was doing anyway). Make sure to add the header title "Authorization" with the value, "Bearer {token goes here}"
-![header bearer token](./demo-screens/header-bearer-token.jpg)
