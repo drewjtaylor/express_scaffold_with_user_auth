@@ -17,7 +17,7 @@ use OpenSSL to create "server.cert" and "server.key" using the following command
 
 Add these files to "bin" folder 
 
-Scrap or reconfigure the "eventsRouter" in "routes" and "Event.js" in "models" (currently has functionality to require user auth for certain things, post things, etc.)
+Originally this was for an app to keep track of events, users, and the the actions connecting them. All of the events files (Event.js, eventsRouter) can be removed safelu OR repurposed to whatever data you're working with.
 
 
 
