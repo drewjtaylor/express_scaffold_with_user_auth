@@ -30,6 +30,9 @@ const app = express();
 // Set up Morgan middleware logging in dev mode
 app.use(morgan('dev'));
 
+// Only parse query parameters into strings, not objects (see https://masteringjs.io/tutorials/express/query-parameters and https://blog.websecurify.com/2014/08/hacking-nodejs-and-mongodb)
+app.set('query parser', 'simple');
+
 
 // Redirect non-secure requests to https
 app.all('*', (req, res, next) => {
